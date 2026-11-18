@@ -1,0 +1,92 @@
+/* GABA CORPORATION - Custom High-Performance Industrial Styles */
+:root {
+  --color-tertiary: #bef500;
+  --color-tertiary-hover: #a6d700;
+  --color-surface-container: #1e2020;
+  --color-surface-high: #282a2b;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #282a2b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bef500;
+}
+
+/* Zero Radius Strict Architecture */
+* {
+  border-radius: 0px !important;
+}
+
+/* Specific chamfer cut paths as defined in DESIGN.md */
+.chamfer-corner {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.chamfer-badge {
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+/* Spec Gauge segmented bar */
+.spec-gauge {
+  display: flex;
+  gap: 3px;
+  height: 6px;
+}
+.spec-gauge-block {
+  flex: 1;
+  background-color: #333535;
+  transition: background-color 0.3s ease;
+}
+.spec-gauge-block.active {
+  background-color: #bef500;
+  box-shadow: 0 0 6px rgba(190, 245, 0, 0.4);
+}
+
+/* Technical Hairline Borders */
+.hairline-border {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.hairline-border-high {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.hairline-border-tertiary {
+  border: 1px solid rgba(190, 245, 0, 0.5);
+}
+
+/* Glowing Neon Highlights */
+.glow-tertiary {
+  box-shadow: 0 0 20px rgba(190, 245, 0, 0.25);
+}
+.glow-tertiary-strong {
+  box-shadow: 0 0 30px rgba(190, 245, 0, 0.45);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Pulse indicator animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 8px #bef500;
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.92);
+    box-shadow: 0 0 2px #bef500;
+  }
+}
+.telemetry-pulse {
+  animation: pulseGlow 2s infinite ease-in-out;
+}

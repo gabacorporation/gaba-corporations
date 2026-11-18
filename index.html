@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>GABA CORPORATION | High-Performance Sportswear & Activewear Manufacturing</title>
+  <meta name="description" content="GABA Corporation is an ISO 9001 certified OEM/ODM sportswear and activewear manufacturer specializing in custom activewear, sublimated teamwear, compression gear, and private label fitness apparel."/>
+  
+  <!-- Google Fonts: Space Grotesk & Geist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- Material Symbols Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#0a0a0a",
+            "surface": "#121414",
+            "surface-dim": "#121414",
+            "surface-bright": "#2c2e2e",
+            "surface-container-lowest": "#080a0a",
+            "surface-container-low": "#141616",
+            "surface-container": "#1a1c1c",
+            "surface-container-high": "#242627",
+            "surface-container-highest": "#303233",
+            "on-surface": "#f0f0f0",
+            "on-surface-variant": "#a3a7a7",
+            "outline": "#444748",
+            "outline-variant": "#2a2c2d",
+            "primary": "#c9c6c5",
+            "on-primary": "#121212",
+            "primary-container": "#0a0a0a",
+            "tertiary": "#bef500",
+            "on-tertiary": "#121a00",
+            "tertiary-hover": "#a6d700",
+            "tertiary-container": "#182200"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline-xl": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "label-lg": ["Space Grotesk", "sans-serif"],
+            "label-md": ["Space Grotesk", "sans-serif"],
+            "label-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "body-md": ["Geist", "sans-serif"],
+            "body-sm": ["Geist", "sans-serif"]
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1rem",
+            "margin": "2rem",
+            "margin-desktop": "3.5rem"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Industrial Stylesheet -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-tertiary selection:text-on-tertiary">
+
+  <!-- ================= FIXED HEADER ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+    <div class="h-20 max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop flex items-center justify-between gap-space-md">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-space-sm shrink-0">
+        <a class="flex items-center gap-space-sm group" href="#home">
+          <div class="w-9 h-9 bg-tertiary text-on-tertiary font-display font-bold text-xl flex items-center justify-center tracking-tighter">
+            G
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm uppercase tracking-wider text-on-surface font-bold group-hover:text-tertiary transition-colors leading-none">GABA CORP</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-on-surface-variant">Precision Sportswear</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-space-lg text-sm font-label-md uppercase tracking-wider">
+        <a class="py-1 text-tertiary font-bold hover:text-tertiary transition-colors" data-target="home" href="#home">Home</a>
+        <a class="py-1 text-on-surface-variant hover:text-white transition-colors" data-target="about-us" href="#about-us">About Us</a>
+        <a class="py-1 text-on-surface-variant hover:text-white transition-colors" data-target="products" href="#products">Products</a>
+        <a class="py-1 text-on-surface-variant hover:text-white transition-colors" data-target="custom-manufacturing" href="#custom-manufacturing">Manufacturing</a>
+        <a class="py-1 text-on-surface-variant hover:text-white transition-colors" data-target="our-process" href="#our-process">Our Process</a>
+        <a class="py-1 text-on-surface-variant hover:text-white transition-colors" data-target="calculator" href="#calculator">B2B Estimator</a>
+        <a class="py-1 text-on-surface-variant hover:text-white transition-colors" data-target="contact" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Header CTAs & Mobile Hamburger Toggle -->
+      <div class="flex items-center gap-space-sm sm:gap-space-md shrink-0">
+        <button onclick="scrollToQuote()" class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm bg-tertiary text-on-tertiary font-label-md uppercase font-bold tracking-widest hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(190,245,0,0.35)] transition-all active:scale-[0.98]">
+          Get a Quote
+        </button>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="xl:hidden p-2 text-on-surface hover:text-tertiary transition-colors bg-surface-container hairline-border">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MOBILE NAVIGATION DRAWER ================= -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobileMenuDrawer" class="fixed top-0 right-0 w-[85vw] max-w-sm h-full bg-surface-container-low border-l border-white/10 z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-between p-space-lg">
+    <div>
+      <div class="flex items-center justify-between pb-space-md border-b border-white/10 mb-space-lg">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-tertiary text-on-tertiary font-display font-bold flex items-center justify-center">G</div>
+          <span class="font-headline-sm uppercase text-on-surface font-bold">GABA CORP</span>
+        </div>
+        <button id="closeMobileMenuBtn" aria-label="Close Navigation Menu" class="p-1.5 text-on-surface hover:text-tertiary transition-colors bg-surface-container hairline-border">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-space-md font-label-md uppercase tracking-wider text-base">
+        <a class="mobile-nav-link text-tertiary font-bold" href="#home">Home</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#about-us">About Us</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#products">Products</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#custom-manufacturing">Manufacturing</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#our-process">Our Process</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#showcase">Production Showcase</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#calculator">B2B Estimator</a>
+        <a class="mobile-nav-link text-on-surface-variant hover:text-white" href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="space-y-space-sm pt-space-md border-t border-white/10">
+      <button onclick="scrollToQuote()" class="mobile-nav-link block w-full py-3 text-center bg-tertiary text-on-tertiary font-label-sm uppercase font-bold tracking-widest">
+        Request Custom Quote
+      </button>
+      <button onclick="openWhatsAppChat()" class="w-full py-2.5 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider flex items-center justify-center gap-2 hairline-border hover:text-tertiary">
+        <span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp Direct
+      </button>
+      <div class="text-xs text-on-surface-variant text-center pt-2">
+        <button onclick="openComplianceModal('compliance')" class="underline hover:text-tertiary">ISO 9001:2015 · OEKO-TEX 100 · WRAP</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="w-full pt-20">
+
+    <!-- 1. HOMEPAGE HERO SECTION -->
+    <section id="home" class="relative w-full -mt-20 overflow-hidden bg-primary-container min-h-[92vh] flex items-center">
+      <!-- Background Visuals -->
+      <div class="absolute inset-0 z-0">
+        <img alt="Athletes running at maximum intensity in GABA performance apparel" class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.12]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkEeGZGBPKORoD_W_bxBYQuF9sDtAzF4jlanggI7fqV1Rl_QpEf8lPiwEvNZT9c85aMuSOm82xCNmBkfw4rrCQQheFIOiTJvJv5U4i5-j4a9PnQoDmq1WhTranHqfgUNuPNOX3o9IL-A5TsW0r4EUlbcm4bXW8BqnfFK1sYaLGrCvY1X4wd_CNsX2zMCyTPfIDiTBM-32QGe3NnygJZkzU4VUFJ4GBt4g2X6KQtw"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop pt-32 pb-16 flex flex-col justify-center">
+        <!-- High-Voltage Spec Indicator -->
+        <div class="inline-flex items-center gap-space-sm mb-space-md self-start">
+          <span class="w-2.5 h-2.5 bg-tertiary telemetry-pulse"></span>
+          <span class="font-label-sm uppercase tracking-widest text-tertiary bg-surface-container-high/90 px-3 py-1 hairline-border backdrop-blur-md">
+            OEM / ODM INDUSTRIAL PRECISION TEXTILES
+          </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl uppercase tracking-tight text-on-surface max-w-5xl leading-[0.98] mb-space-md">
+          BUILT FOR <span class="text-tertiary">PERFORMANCE.</span><br/>
+          DESIGNED FOR <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-on-surface-variant">YOUR BRAND.</span>
+        </h1>
+
+        <p class="font-body-lg text-lg text-on-surface-variant max-w-2xl mb-space-xl leading-relaxed">
+          Your Trusted Partner for Custom Sportswear & Activewear Manufacturing. Engineering cutting-edge technical garments for global athletic institutions, private labels, and high-growth fitness disruptors.
+        </p>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-wrap items-center gap-space-md mb-space-xl">
+          <a class="px-space-lg py-space-sm bg-tertiary text-on-tertiary font-label-lg uppercase tracking-wider font-bold transition-all duration-200 hover:bg-white hover:text-black glow-tertiary active:scale-[0.98]" href="#products">
+            Explore Our Products
+          </a>
+          <button onclick="scrollToQuote()" class="px-space-lg py-space-sm bg-transparent text-on-surface font-label-lg uppercase tracking-wider font-bold hairline-border-high transition-all duration-200 hover:bg-white hover:text-black active:scale-[0.98]">
+            Request A Quote
+          </button>
+          <button onclick="openQuickContactModal()" class="px-space-md py-space-sm bg-surface-container text-tertiary font-label-md uppercase tracking-wider font-bold flex items-center gap-2 hairline-border hover:bg-surface-container-high">
+            <span class="material-symbols-outlined text-[18px]">chat</span> Direct Communication
+          </button>
+        </div>
+
+        <!-- Athletic Telemetry Spec Pills Bar -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs sm:gap-space-sm max-w-4xl bg-surface-container-lowest/80 backdrop-blur-md p-space-sm hairline-border">
+          <div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-surface-container-high/60">
+            <span class="material-symbols-outlined text-tertiary text-[20px]">tune</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm uppercase tracking-wider text-on-surface font-semibold">100% Custom Tailored</span>
+              <span class="font-body-sm text-xs text-on-surface-variant">Bespoke Tech Pack CAD & Fit</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-surface-container-high/60">
+            <span class="material-symbols-outlined text-tertiary text-[20px]">public</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm uppercase tracking-wider text-on-surface font-semibold">B2B Private Label Export</span>
+              <span class="font-body-sm text-xs text-on-surface-variant">Direct Global Freight Handling</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm px-space-sm py-space-xs bg-surface-container-high/60">
+            <span class="material-symbols-outlined text-tertiary text-[20px]">deployed_code</span>
+            <div class="flex flex-col">
+              <span class="font-label-sm uppercase tracking-wider text-on-surface font-semibold">Low MOQ Batches</span>
+              <span class="font-body-sm text-xs text-on-surface-variant">Agile Sampling & Rapid Scalability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TRUST HIGHLIGHTS BAR -->
+    <section class="w-full bg-surface-container-low py-space-lg hairline-border border-x-0">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+          <!-- Metric 01 -->
+          <div class="p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-space-sm">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary">PILLAR // 01</span>
+              <span class="material-symbols-outlined text-tertiary text-[24px]">precision_manufacturing</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Quality-Focused Production</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">Precision laser cut tooling, ultrasonic bonding, and high-tensile 4-needle 6-thread flatlock stitching.</p>
+          </div>
+          <!-- Metric 02 -->
+          <div class="p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-space-sm">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary">PILLAR // 02</span>
+              <span class="material-symbols-outlined text-tertiary text-[24px]">design_services</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Custom Design Solutions</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">Comprehensive OEM & ODM digital tech pack conversion, 3D anatomical modeling, and exact Pantone matching.</p>
+          </div>
+          <!-- Metric 03 -->
+          <div class="p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-space-sm">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary">PILLAR // 03</span>
+              <span class="material-symbols-outlined text-tertiary text-[24px]">loyalty</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Private Label Apparel</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">Custom tactile silicone transfers, woven jacquard necklabels, FSC-certified hangtags, and custom polybags.</p>
+          </div>
+          <!-- Metric 04 -->
+          <div class="p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-space-sm">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary">PILLAR // 04</span>
+              <span class="material-symbols-outlined text-tertiary text-[24px]">local_shipping</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Global B2B Logistics</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">ISO 9001:2015 and WRAP compliant facilities with door-to-door express DDP freight handling worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PRODUCT CATEGORIES (8 IMAGE CARDS) -->
+    <section id="products" class="w-full py-space-xl bg-background">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+          <div>
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="w-1.5 h-1.5 bg-tertiary"></span>
+              <span class="font-label-sm uppercase tracking-widest text-tertiary">CATALOG CLASSIFICATION</span>
+            </div>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface">ENGINEERED PRODUCT LINES</h2>
+          </div>
+          <p class="font-body-md text-on-surface-variant max-w-md">
+            Specialized high-performance manufacturing across 8 core activewear categories, calibrated to withstand extreme athletic rigors.
+          </p>
+        </div>
+
+        <!-- Categories Grid (8 Cards) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+          
+          <!-- Cat 1 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Sportswear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0ygW-fU7YAV0STaWBXs2ieNMJdTWMhO5yf93C1NZnRITdJvYFaNS8oXS0sz5pPrI4T6E_qLs3fJTNwLddZdEd67mEcV-c_FzAHr6YnPFWrbh24Mag6bEfPaq2pXT_0lFwiTPFcrsW188dvmG4hK532T93FuHSyAaaHHRIsfBhxV-2DRU1n9zQsd-vkr7R7NY3LUPdOnM3AiYg3bTfCaTQaCvLEIPmNfHu2rNVmA"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 01 // TEXTILE</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Sportswear</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Technical running gear, moisture-dispersing singlets, and high-mobility endurance apparel.</p>
+              <button onclick="exploreCategory('Sportswear', 'tops')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 2 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Gym & Fitness Wear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0ETFr6XYndXBIuS-pm_PsiKEiuhmr5QDyRZR84mdEHBBruuezrmXe8o8QFF5GWhHYvdtKbxBa56QeeNnQD0ZuD82vblwYXByeE_WEr01pFN3FCl6v2AyZSYATjmbwmyPCO_4Q88By1YFhvADXWcE4H2OHiurJZaJBbnqrRN2-Pb-6qAaIPPneRgWw3VtKvhD1YmVZFa9TLNgKOtL00_V3ENiX8e5q9xxS-lwNTQ"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 02 // FITNESS</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Gym &amp; Fitness Wear</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Oversized pump covers, tapered physique stringers, and squat-proof seamless sets.</p>
+              <button onclick="exploreCategory('GymWear', 'bottoms')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 3 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Men's Activewear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiQZypRzcdZ2VqTqBOdwDzAuggjGzgUwyt1Fbrqml0NcbWv6dONoStYwNAt5hRdPXHp3DuclTTCZ92wLcR-ioWYdpY6oYiY4dzTyAwnkCqvuvNoVDrqDptgAgefnrBeSUerCK1SCDk-pXpTRRTV6pKfwQuwWNRofG2APK_e244X9o8ip_iz99IcGWSau4Tn52DIOoHC6HZd54JjXF7G0uYkjTJeQ8B6d7pBhgX2A"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 03 // ERGONOMIC</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Men's Activewear</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Ergonomic laser-vented training tees, 2-in-1 liner shorts, and technical commuter joggers.</p>
+              <button onclick="exploreCategory('MenActivewear', 'bottoms')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 4 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Women's Activewear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcVm3AJnucl_ITs86XKnzSCvNaiSkfftGFEvjWijwKDlppjxbgnLRxyYgawFNC66GpubFBX5qJWc5YzwzziSRLqQxto4K8yC1T2JxYXxz5-jUITCrVxIb9zRrWtJsrYDh7tKSLJ7u9tEJXlaBaPs-l-da_HWGe3GoTq1X7l3xX6t_GLlNNQrWv248REVI5vhhViD3ZDwWNabLq2yNVHyFNmYzmgOfCVkdZdNKjNQ"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 04 // ANATOMICAL</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Women's Activewear</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Sculpting medium & high support sports bras, high-rise compression leggings, and ribbed tanks.</p>
+              <button onclick="exploreCategory('WomenActivewear', 'bottoms')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 5 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Team Uniforms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByBDvq4HskpEiZawM8Z4pGM8Drr-xH5ubBGdWzfaUQclnETYB1x--IzTsf3yFWy6hNPY2AvdWdTQIHGKKdpL1vftF6MDU5wu4TKMiIF0TNM5BIBqVpKHkM3lyEAM6wGNYgss4IcVsqaYOZjS6bucG75tiLRCa5icapqJUcGLszcgwx7vu8gFeBOrq6uRnXUO8duUKLct09rYpIEBgmdYY5N6qsBg7PI7-3Uihgcw"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 05 // SUBLIMATION</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Team Uniforms</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Full all-over sublimation printing for soccer, basketball, rugby, and track & field kits.</p>
+              <button onclick="exploreCategory('Uniforms', 'tops')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 6 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Tracksuits & Joggers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdtE8W0iZsCyum3DkUMho0sF5q4tV-OsHMTgOswqUjLwr8zWDIMQKXtZI3by_eft9xzdoXOZYywNS1s9rb4qxtx7VPc-VN7fKo5bGNLzf_uS6JkZkRMNfpc2RjMTF1quxXHUxSeaUguLs015fynlPvixYiPvpRJvSerxkQkMPAeDTX1thIjmE79Xs2Fwvbue5ngLmE5K8_E6CbPa_WYtjkZBHMuNSjuwqWEeIdug"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 06 // LEISURE</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Tracksuits &amp; Joggers</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">450 GSM luxury French terry, custom dyed poly-spandex fleece, and welded zip closures.</p>
+              <button onclick="exploreCategory('Tracksuits', 'outerwear')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 7 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.55]" alt="Compression Wear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIc9tRFTjvO7rSjhkY_um83SOpVKW-WVcf2nk5JadoSw9mGGJoBXq76LYgmzXOcN8I47obGV19LL3K6lOiAFVPvmDNAmlsd4ix5qNcmYqOhphP_FQvQjv3nl5ODrpNYvnz2cGbEOw4JscVqYejaoOQirMrYBYNtti1YuMCydrHb2XA01jmrnBFpCQp7y6jKljjZ6k5k_c8SSZu-4owu6g9TSYQ6QEBzGHM5JNPw"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 07 // RECOVERY</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Compression Wear</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Targeted graduated compression zone panels, anti-chafing rashguards, and base layers.</p>
+              <button onclick="exploreCategory('Compression', 'tops')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cat 8 -->
+          <div class="group relative overflow-hidden bg-surface-container h-[400px] flex flex-col justify-end p-space-md hairline-border hover:border-tertiary/70 transition-all duration-300">
+            <div class="absolute inset-0 z-0">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-[0.52]" alt="Performance Apparel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA04GA6mZNkq8fQPHPvbKz2yCAdVU1SI-w4hI7Gvrk4B96MM2Z4H0eR0bPueqfZ0UtdcpL_maIwLyMhClp4w6vkUFbPdL1r4rsUXgtZlk2MvnO0lU23-TXjGYRgSRJshD49fWuJoaDzdU00TBZNLnCfwL0Y-FvBzmZRCaRGevNABH6H-I2PYmNeTJTvzeX7Oz8mCxQ8ejB1iwTOe8UwCV2wdXbKBl5lbYvaDi_rw"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/70 to-transparent"></div>
+            </div>
+            <div class="relative z-10 flex flex-col">
+              <span class="font-label-sm uppercase tracking-widest text-tertiary mb-space-xs">CAT. 08 // TECHNICAL</span>
+              <h3 class="font-headline-md uppercase text-on-surface mb-space-xs">Performance Apparel</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2 mb-space-sm">Wind-blocking membranes, thermal insulating mid-layers, and bespoke hybrid textiles.</p>
+              <button onclick="exploreCategory('CustomBespoke', 'outerwear')" class="font-label-sm uppercase tracking-wider text-tertiary flex items-center gap-space-xs hover:translate-x-1 transition-transform self-start">
+                Explore Category <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT GABA CORPORATION -->
+    <section id="about-us" class="w-full py-space-xl bg-surface-container-low hairline-border border-x-0 overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+          
+          <!-- Visual Craftsmanship Display (Left Col) -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative bg-surface-container-high overflow-hidden shadow-2xl hairline-border">
+              <img alt="Close-up macro view of electric lime precision flatlock stitching on athletic black fabric" class="w-full h-[500px] object-cover object-center filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyzkiy2_GoS5MthcoimZWZd-RPqrFr9vljFQfaT1SvzqauIvjsTX1Ip55BB4948bmsqsRG_Z_paiZpP1eyZQiKVIRyo3eZ5F_5MUvB1QGM86qjeH-Ky9fWJBnN0TRzuV0md_U05N8r1zXvGwKf5hkpb9d251vAg1ZoYpbMbDmoq5HkHTxHeRmxmgJkPoQI6gxgVhQtvEo_Isg7LC0ThqAJTIayq5je6NzVMq9oMA"/>
+              
+              <!-- HUD Telemetry Badge Overlay -->
+              <div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-md p-space-sm hairline-border max-w-xs">
+                <div class="flex items-center gap-space-xs mb-1">
+                  <span class="w-2 h-2 bg-tertiary telemetry-pulse"></span>
+                  <span class="font-label-sm uppercase text-tertiary font-bold tracking-widest text-[11px]">ISO 9001 ACCREDITED</span>
+                </div>
+                <p class="font-headline-sm uppercase text-on-surface font-bold text-sm">15+ YEARS OF TEXTILE MASTERY</p>
+              </div>
+
+              <!-- Precision Seam Callout Box -->
+              <div class="absolute bottom-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-space-sm hairline-border">
+                <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[10px]">SEAM ARCHITECTURE</span>
+                <span class="font-headline-sm text-tertiary font-mono text-sm">4-NEEDLE / 6-THREAD FLATLOCK</span>
+                <div class="w-full bg-surface-variant h-1 mt-2">
+                  <div class="bg-tertiary h-1 w-[94%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative & Advantage Stack (Right Col) -->
+          <div class="lg:col-span-6 flex flex-col justify-center">
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="w-2 h-0.5 bg-tertiary"></span>
+              <span class="font-label-sm uppercase tracking-widest text-tertiary">ABOUT GABA CORPORATION</span>
+            </div>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface mb-space-md">
+              WE TURN YOUR APPAREL IDEAS INTO REALITY.
+            </h2>
+            <p class="font-body-lg text-on-surface-variant mb-space-lg leading-relaxed">
+              GABA CORPORATION provides comprehensive sportswear and activewear manufacturing solutions for brands seeking uncompromising quality, acute customization, and professional craftsmanship. From initial vector tech packs to fully certified production runs, we bring your brand's vision to life with zero deviation from athletic standards.
+            </p>
+
+            <!-- Core Pillar Checklist -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-xl">
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm">Custom Fabric Milling</h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">Custom GSM, yarn spinning, and hydrophilic sweat-wicking chemical dips.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm">OEKO-TEX Certified Inks</h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">Non-toxic, ultra-durable Italian sublimation and water-based discharge prints.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm">Triple Inline QA</h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">Inline tension verification, seam burst test, and 100% metal needle scan.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm">Scalable Batch MOQs</h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">Agile sample runs to enterprise-scale container freight shipments.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discover Button -->
+            <div class="flex items-center gap-space-md">
+              <a class="px-space-lg py-space-sm bg-tertiary text-on-tertiary font-label-lg uppercase tracking-wider font-bold hover:bg-white hover:text-black glow-tertiary transition-all" href="#custom-manufacturing">
+                Discover Our Capabilities
+              </a>
+              <button onclick="openComplianceModal('compliance')" class="px-space-md py-space-sm bg-surface-container text-on-surface hover:text-tertiary font-label-md uppercase tracking-wider hairline-border">
+                Inspect Certifications
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CUSTOM MANUFACTURING SECTION -->
+    <section id="custom-manufacturing" class="w-full py-space-xl bg-background relative overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="text-center max-w-3xl mx-auto mb-space-xl">
+          <span class="font-label-sm uppercase tracking-widest text-tertiary block mb-space-xs">BESPOKE ATHLETIC ATELIER</span>
+          <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface mb-space-sm">
+            YOUR BRAND. YOUR DESIGN. OUR CRAFTSMANSHIP.
+          </h2>
+          <p class="font-body-md text-on-surface-variant">
+            End-to-end bespoke athletic garment production engineered to your exact tech pack specifications, pattern grading, and substrate composition.
+          </p>
+        </div>
+
+        <!-- 6 Technical Grid Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md mb-space-xl">
+          <!-- Feature 1 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/70 transition-all duration-300 group cursor-pointer" onclick="scrollToQuote('CustomBespoke', 'Prototyping & Tech Pack CAD drafting consultation inquiry.')">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest text-tertiary mb-space-md group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+              <span class="material-symbols-outlined text-[28px]">polyline</span>
+            </div>
+            <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[11px]">CAPABILITY 01</span>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Prototyping & Tech Packs</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-2">CAD pattern drafting, 3D anatomical draping, grading matrices, and rapid 7-day pre-production physical prototypes.</p>
+            <span class="text-tertiary font-label-sm uppercase text-[11px] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Request CAD Sample <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </span>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/70 transition-all duration-300 group cursor-pointer" onclick="scrollToQuote('CustomBespoke', 'Fabric & Color formulation (GSM custom milling) inquiry.')">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest text-tertiary mb-space-md group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+              <span class="material-symbols-outlined text-[28px]">palette</span>
+            </div>
+            <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[11px]">CAPABILITY 02</span>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Fabric & Color Formulation</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-2">Proprietary blends including Recycled Poly, Nylon 6.6 Cordura, Spandex blends, and organic Bamboo fibers tested for tensile longevity.</p>
+            <span class="text-tertiary font-label-sm uppercase text-[11px] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Request Swatch Kit <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </span>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/70 transition-all duration-300 group cursor-pointer" onclick="scrollToQuote('CustomBespoke', 'Embellishment printing technologies (DTF, 3D Silicone, Sublimation) inquiry.')">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest text-tertiary mb-space-md group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+              <span class="material-symbols-outlined text-[28px]">print</span>
+            </div>
+            <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[11px]">CAPABILITY 03</span>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Embellishment Technologies</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-2">Direct-to-Film (DTF), High-Density 3D Matte Silicone, reflective heat seal strips, laser perforation, and Italian sublimation.</p>
+            <span class="text-tertiary font-label-sm uppercase text-[11px] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              View Print Options <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </span>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/70 transition-all duration-300 group cursor-pointer" onclick="scrollToQuote('CustomBespoke', 'Private label branding, trims, necklabels & polybag packaging inquiry.')">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest text-tertiary mb-space-md group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+              <span class="material-symbols-outlined text-[28px]">branding_watermark</span>
+            </div>
+            <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[11px]">CAPABILITY 04</span>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Private Label & Trims</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-2">Woven satin labels, heat-sealed interior size guides, customized matte eyelets, drawstrings, and branded biodegradable polybags.</p>
+            <span class="text-tertiary font-label-sm uppercase text-[11px] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Explore Trims <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </span>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/70 transition-all duration-300 group cursor-pointer" onclick="scrollToQuote('CustomBespoke', 'Anatomical sizing & grading specifications inquiry.')">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest text-tertiary mb-space-md group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+              <span class="material-symbols-outlined text-[28px]">straighten</span>
+            </div>
+            <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[11px]">CAPABILITY 05</span>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Anatomical Sizing & Grading</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-2">Global grading standards engineered for US Athletic, European Slim, Asian Standard, or completely bespoke size matrices.</p>
+            <span class="text-tertiary font-label-sm uppercase text-[11px] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Size Charts <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </span>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/70 transition-all duration-300 group cursor-pointer" onclick="scrollToQuote('CustomBespoke', 'Large scale commercial run contract inquiry (2,000+ units).')">
+            <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest text-tertiary mb-space-md group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+              <span class="material-symbols-outlined text-[28px]">inventory_2</span>
+            </div>
+            <span class="font-label-sm uppercase tracking-widest text-on-surface-variant block mb-1 text-[11px]">CAPABILITY 06</span>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs">Industrial Production Scale</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-2">Monthly manufacturing capacity surpassing 120,000 activewear units backed by inline quality assurance reports at every phase.</p>
+            <span class="text-tertiary font-label-sm uppercase text-[11px] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Commercial RFQ <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Action Center -->
+        <div class="flex justify-center">
+          <button onclick="scrollToQuote()" class="px-space-xl py-space-sm bg-tertiary text-on-tertiary font-label-lg uppercase tracking-widest font-bold hover:bg-white hover:text-black glow-tertiary transition-all">
+            Start Your Project
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. OUR PROCESS (5-STEP HORIZONTAL TIMELINE) -->
+    <section id="our-process" class="w-full py-space-xl bg-surface-container-low hairline-border border-x-0">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+          <div>
+            <span class="font-label-sm uppercase tracking-widest text-tertiary block mb-space-xs">PRODUCTION PROTOCOL</span>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface">OUR PROCESS</h2>
+          </div>
+          <p class="font-body-md text-on-surface-variant max-w-md">
+            A disciplined, zero-friction five-stage production pipeline engineered for clarity, speed, and absolute defect elimination.
+          </p>
+        </div>
+
+        <!-- Step Timeline Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+          <!-- Step 01 -->
+          <div class="relative z-10 flex flex-col p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors">
+            <div class="flex items-center justify-between mb-space-md">
+              <span class="w-10 h-10 flex items-center justify-center bg-tertiary text-on-tertiary font-headline-sm font-bold">01</span>
+              <span class="material-symbols-outlined text-tertiary text-[20px]">assignment</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Submit Specs</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">Provide design sketches, moodboards, or finished tech packs with desired target GSM and trim ideas.</p>
+          </div>
+          <!-- Step 02 -->
+          <div class="relative z-10 flex flex-col p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors">
+            <div class="flex items-center justify-between mb-space-md">
+              <span class="w-10 h-10 flex items-center justify-center bg-tertiary text-on-tertiary font-headline-sm font-bold">02</span>
+              <span class="material-symbols-outlined text-tertiary text-[20px]">fact_check</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Material Lock</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">CAD digital confirmation, fabric swatch verification, lab-dip color lock, and tech-pack finalized.</p>
+          </div>
+          <!-- Step 03 -->
+          <div class="relative z-10 flex flex-col p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors">
+            <div class="flex items-center justify-between mb-space-md">
+              <span class="w-10 h-10 flex items-center justify-center bg-tertiary text-on-tertiary font-headline-sm font-bold">03</span>
+              <span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Sample Sign-Off</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">Pre-production sample made and express dispatched for fit testing, stretch evaluation, and final review.</p>
+          </div>
+          <!-- Step 04 -->
+          <div class="relative z-10 flex flex-col p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors">
+            <div class="flex items-center justify-between mb-space-md">
+              <span class="w-10 h-10 flex items-center justify-center bg-tertiary text-on-tertiary font-headline-sm font-bold">04</span>
+              <span class="material-symbols-outlined text-tertiary text-[20px]">conveyor_belt</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Bulk Production</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">Automated computer-aided cutting, multi-station stitching, and multi-tier inline QA checks.</p>
+          </div>
+          <!-- Step 05 -->
+          <div class="relative z-10 flex flex-col p-space-md bg-surface-container hairline-border hover:border-tertiary/60 transition-colors">
+            <div class="flex items-center justify-between mb-space-md">
+              <span class="w-10 h-10 flex items-center justify-center bg-tertiary text-on-tertiary font-headline-sm font-bold">05</span>
+              <span class="material-symbols-outlined text-tertiary text-[20px]">flight_takeoff</span>
+            </div>
+            <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Shipping & Delivery</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant">100% metal needle scan, eco polybag packaging, export clearance, and insured global freight shipping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHY CHOOSE US -->
+    <section id="why-us" class="w-full py-space-xl bg-background">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="mb-space-xl">
+          <span class="font-label-sm uppercase tracking-widest text-tertiary block mb-space-xs">THE GABA ADVANTAGE</span>
+          <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface">WHY GLOBAL BRANDS CHOOSE GABA</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+          <!-- Feature 1 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-tertiary-container text-tertiary flex items-center justify-center mb-space-md hairline-border">
+                <span class="material-symbols-outlined text-[24px]">verified_user</span>
+              </div>
+              <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Quality-Focused Production</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Strict stitch-per-inch compliance, zero-pilling wash resistance testing, and ISO-tested color fastness under heavy perspiration.</p>
+            </div>
+            <div class="pt-space-md mt-space-md border-t border-white/10">
+              <span class="font-label-sm text-tertiary font-mono uppercase text-xs">99.8% DEFECT-FREE RATE</span>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-tertiary-container text-tertiary flex items-center justify-center mb-space-md hairline-border">
+                <span class="material-symbols-outlined text-[24px]">swap_horiz</span>
+              </div>
+              <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Flexible Customization</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Complete freedom across pattern silhouettes, custom GSM weight formulations, bonded seams, and exclusive textile trims.</p>
+            </div>
+            <div class="pt-space-md mt-space-md border-t border-white/10">
+              <span class="font-label-sm text-tertiary font-mono uppercase text-xs">ZERO RESTRICTIONS</span>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-tertiary-container text-tertiary flex items-center justify-center mb-space-md hairline-border">
+                <span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+              </div>
+              <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Attention to Detail</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Bar-tacked stress points on high-load seams, laser-cut ventilation zones, and clean internal taping for next-to-skin zero friction.</p>
+            </div>
+            <div class="pt-space-md mt-space-md border-t border-white/10">
+              <span class="font-label-sm text-tertiary font-mono uppercase text-xs">MICRON PRECISION</span>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="p-space-lg bg-surface-container hairline-border hover:border-tertiary/60 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-tertiary-container text-tertiary flex items-center justify-center mb-space-md hairline-border">
+                <span class="material-symbols-outlined text-[24px]">forum</span>
+              </div>
+              <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-sm">Professional Communication</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Dedicated technical English-speaking account managers providing milestone photos, production charts, and 24h responsiveness.</p>
+            </div>
+            <div class="pt-space-md mt-space-md border-t border-white/10">
+              <span class="font-label-sm text-tertiary font-mono uppercase text-xs">&lt;24H RESPONSE SLA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FEATURED PRODUCTS SHOWCASE (FILTERABLE WITH SPECS) -->
+    <section id="showcase" class="w-full py-space-xl bg-surface-container-low hairline-border border-x-0">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <!-- Section Header with Filter Pills -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-xl gap-space-md">
+          <div>
+            <span class="font-label-sm uppercase tracking-widest text-tertiary block mb-space-xs">OEM / ODM SHOWCASE</span>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface">FEATURED PRODUCTION SHOWCASE</h2>
+          </div>
+          <!-- Interactive Category Switcher -->
+          <div class="flex flex-wrap gap-space-xs" id="productFilterButtons">
+            <button class="filter-btn px-space-sm py-1.5 bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold transition-all hairline-border glow-tertiary" data-category="all" type="button">All Models</button>
+            <button class="filter-btn px-space-sm py-1.5 bg-surface-container text-on-surface-variant font-label-sm uppercase tracking-wider hover:text-on-surface transition-all hairline-border" data-category="tops" type="button">Tops &amp; Tees</button>
+            <button class="filter-btn px-space-sm py-1.5 bg-surface-container text-on-surface-variant font-label-sm uppercase tracking-wider hover:text-on-surface transition-all hairline-border" data-category="bottoms" type="button">Bottoms &amp; Tights</button>
+            <button class="filter-btn px-space-sm py-1.5 bg-surface-container text-on-surface-variant font-label-sm uppercase tracking-wider hover:text-on-surface transition-all hairline-border" data-category="outerwear" type="button">Outerwear</button>
+          </div>
+        </div>
+
+        <!-- 6 Production Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="productsGrid">
+          
+          <!-- Product 1 (Compression Tee) -->
+          <div class="product-item bg-surface-container flex flex-col group overflow-hidden hairline-border hover:border-tertiary/70 transition-all" data-category="tops">
+            <div class="relative h-80 overflow-hidden bg-primary-container">
+              <img alt="Technical black compression athletic shirt" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIc9tRFTjvO7rSjhkY_um83SOpVKW-WVcf2nk5JadoSw9mGGJoBXq76LYgmzXOcN8I47obGV19LL3K6lOiAFVPvmDNAmlsd4ix5qNcmYqOhphP_FQvQjv3nl5ODrpNYvnz2cGbEOw4JscVqYejaoOQirMrYBYNtti1YuMCydrHb2XA01jmrnBFpCQp7y6jKljjZ6k5k_c8SSZu-4owu6g9TSYQ6QEBzGHM5JNPw"/>
+              <div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 hairline-border">
+                <span class="font-label-sm uppercase text-tertiary font-bold tracking-wider text-[11px]">COMPRESSION GEAR</span>
+              </div>
+              <button onclick="openProductModal('GB-CMP-09')" class="absolute bottom-3 right-3 bg-surface-container-high/90 hover:bg-tertiary hover:text-black text-on-surface px-2.5 py-1 text-xs font-label-sm uppercase hairline-border flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">visibility</span> Quick View
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-sm text-on-surface-variant font-mono text-xs">SKU: GB-CMP-09</span>
+                  <span class="font-label-sm text-tertiary font-semibold text-xs">240 GSM</span>
+                </div>
+                <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-base">Compression Athletic Shirt</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant mb-space-md">88% Recycled Poly / 12% Spandex blend. 4-way anatomical stretch with targeted thoracic cooling zones.</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="openProductModal('GB-CMP-09')" class="w-1/2 py-2 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs hairline-border">
+                  Inspect Specs
+                </button>
+                <button onclick="requestQuoteForSku('GB-CMP-09', 'Compression Athletic Shirt')" class="w-1/2 py-2 text-center bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs">
+                  Quote SKU
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 (Sports Jerseys) -->
+          <div class="product-item bg-surface-container flex flex-col group overflow-hidden hairline-border hover:border-tertiary/70 transition-all" data-category="tops">
+            <div class="relative h-80 overflow-hidden bg-primary-container">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95" alt="Custom Performance Jerseys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkC5hpKTXbbC_ObZqvsLuLXOKK1-vwRFI82fFPfH6WJkDb3uBtv6pmTNwhxAmRfOAs8yPGjyzFwL-GCiR8msn71u3-YdMfCYPvKBiG5SB54IdmXeedJulu97yYLECGxvvOKaNqqUZjvrajh187xdTKOtSq6iYh_3nu9VRS_9prADrGwi8ArCq4FFfwIHjrbJigO21qTFk4GeSUsUj55rTAd5M4Vz3PzBGL_UXEOA"/>
+              <div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 hairline-border">
+                <span class="font-label-sm uppercase text-tertiary font-bold tracking-wider text-[11px]">TEAM UNIFORMS</span>
+              </div>
+              <button onclick="openProductModal('GB-TM-04')" class="absolute bottom-3 right-3 bg-surface-container-high/90 hover:bg-tertiary hover:text-black text-on-surface px-2.5 py-1 text-xs font-label-sm uppercase hairline-border flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">visibility</span> Quick View
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-sm text-on-surface-variant font-mono text-xs">SKU: GB-TM-04</span>
+                  <span class="font-label-sm text-tertiary font-semibold text-xs">160 GSM</span>
+                </div>
+                <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-base">Custom Performance Jerseys</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant mb-space-md">100% Moisture-Wicking Micro-Mesh. High-definition Italian sublimation with anti-bacterial finish.</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="openProductModal('GB-TM-04')" class="w-1/2 py-2 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs hairline-border">
+                  Inspect Specs
+                </button>
+                <button onclick="requestQuoteForSku('GB-TM-04', 'Custom Performance Team Jersey')" class="w-1/2 py-2 text-center bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs">
+                  Quote SKU
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 (Training Hoodies) -->
+          <div class="product-item bg-surface-container flex flex-col group overflow-hidden hairline-border hover:border-tertiary/70 transition-all" data-category="outerwear">
+            <div class="relative h-80 overflow-hidden bg-primary-container">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95" alt="Fleece Training Hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uZxlI-KEEIQUs1O58jabcXT9zRkuyk-7Ho6i97xXHeP84O0hgMSjIr6dVbnACBeqbibvo6T4kXzCJ6OBgDhdmrVHyGSkeMvt23H-p2lpS_72zycABOreVKPqxdwjjsoeoeh6YRiwMewIkbyexmvbLQwKWnd9HbZ6o17Ol1lRREczEiLWpZtbigxR1uUE4Oc8J7tdl9K9nTpyYojlrSg-xjaVq-mokXaXzqJy-w"/>
+              <div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 hairline-border">
+                <span class="font-label-sm uppercase text-tertiary font-bold tracking-wider text-[11px]">OUTERWEAR</span>
+              </div>
+              <button onclick="openProductModal('GB-HD-12')" class="absolute bottom-3 right-3 bg-surface-container-high/90 hover:bg-tertiary hover:text-black text-on-surface px-2.5 py-1 text-xs font-label-sm uppercase hairline-border flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">visibility</span> Quick View
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-sm text-on-surface-variant font-mono text-xs">SKU: GB-HD-12</span>
+                  <span class="font-label-sm text-tertiary font-semibold text-xs">420 GSM</span>
+                </div>
+                <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-base">Fleece Training Hoodie</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant mb-space-md">French Terry 80% Combed Cotton / 20% Poly. Raglan cut with reinforced kangaroo pouch & matte eyelets.</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="openProductModal('GB-HD-12')" class="w-1/2 py-2 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs hairline-border">
+                  Inspect Specs
+                </button>
+                <button onclick="requestQuoteForSku('GB-HD-12', 'Fleece Heavyweight Training Hoodie')" class="w-1/2 py-2 text-center bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs">
+                  Quote SKU
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 (Gym Leggings) -->
+          <div class="product-item bg-surface-container flex flex-col group overflow-hidden hairline-border hover:border-tertiary/70 transition-all" data-category="bottoms">
+            <div class="relative h-80 overflow-hidden bg-primary-container">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95" alt="Sculpt Seamless Leggings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKSGcp0sRlw74pM31aI5Kkf84G5TuhIhiAbq8r3wca_BhOtP-2eAavDM6BBnFnJwigYYAVzT4eBopdEX2060Y4jzbmhCmSvHeZJkVtLh9am_DIsCEBocvAuk0JFoXHYxoCDXYI5Aj2JX4et12zvrDwQAMYqMVUDczDQI2LFO3UNHdIgVJWhgBlQuE8EPa_T-nMwAqSzUrGFIpNaHu4YOJ4ipZmoUL6ZgoXkcwoBw"/>
+              <div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 hairline-border">
+                <span class="font-label-sm uppercase text-tertiary font-bold tracking-wider text-[11px]">FITNESS WEAR</span>
+              </div>
+              <button onclick="openProductModal('GB-LG-08')" class="absolute bottom-3 right-3 bg-surface-container-high/90 hover:bg-tertiary hover:text-black text-on-surface px-2.5 py-1 text-xs font-label-sm uppercase hairline-border flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">visibility</span> Quick View
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-sm text-on-surface-variant font-mono text-xs">SKU: GB-LG-08</span>
+                  <span class="font-label-sm text-tertiary font-semibold text-xs">280 GSM</span>
+                </div>
+                <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-base">Sculpt Seamless Leggings</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant mb-space-md">Nylon 6.6 / Elastane circular knit. Guaranteed 100% squat-proof opacity with ribbed support waistband.</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="openProductModal('GB-LG-08')" class="w-1/2 py-2 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs hairline-border">
+                  Inspect Specs
+                </button>
+                <button onclick="requestQuoteForSku('GB-LG-08', 'Sculpt Seamless Compression Leggings')" class="w-1/2 py-2 text-center bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs">
+                  Quote SKU
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 (Tracksuits) -->
+          <div class="product-item bg-surface-container flex flex-col group overflow-hidden hairline-border hover:border-tertiary/70 transition-all" data-category="outerwear">
+            <div class="relative h-80 overflow-hidden bg-primary-container">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95" alt="Hybrid Athletic Tracksuit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnnn_hQkrTR9Nj8c4F_p2aO79QByOpi5iQIXkH0sMa-ZVfX6Zfo_1_kyzvDvx6PSrXNDK_nrSiUrchKscuaUYLbZyDZq5qSACYJU-rSGDZuKim3_lc7Qws0IbNNxjQCpiqoWJwQmdsW9N4HvWjbNVEl_k4OFHXZAbQOc4vGKz_tA0opkpHTR5ILb1wHdCoqnQeGMEHtmsmB_vDS8wVsEJuocos1HdF3PpYVSzJOA"/>
+              <div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 hairline-border">
+                <span class="font-label-sm uppercase text-tertiary font-bold tracking-wider text-[11px]">TRACKSUITS</span>
+              </div>
+              <button onclick="openProductModal('GB-TRK-03')" class="absolute bottom-3 right-3 bg-surface-container-high/90 hover:bg-tertiary hover:text-black text-on-surface px-2.5 py-1 text-xs font-label-sm uppercase hairline-border flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">visibility</span> Quick View
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-sm text-on-surface-variant font-mono text-xs">SKU: GB-TRK-03</span>
+                  <span class="font-label-sm text-tertiary font-semibold text-xs">320 GSM</span>
+                </div>
+                <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-base">Hybrid Athletic Tracksuit</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant mb-space-md">DWR-coated water-repellent shell with breathable mesh lining and waterproof reverse-coil zips.</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="openProductModal('GB-TRK-03')" class="w-1/2 py-2 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs hairline-border">
+                  Inspect Specs
+                </button>
+                <button onclick="requestQuoteForSku('GB-TRK-03', 'Hybrid Weatherproof Athletic Tracksuit')" class="w-1/2 py-2 text-center bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs">
+                  Quote SKU
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 (Training Shorts) -->
+          <div class="product-item bg-surface-container flex flex-col group overflow-hidden hairline-border hover:border-tertiary/70 transition-all" data-category="bottoms">
+            <div class="relative h-80 overflow-hidden bg-primary-container">
+              <img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-95" alt="2-in-1 Performance Shorts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOYzu8CqeqgACUhBgIhrlz0XCgtUiFAycdyjR-ZdzsNsazIp0bypZG4OH-fxDs1Jw4SEScjlpVdVgvUjf2I4CXZ9DKqf7ezh9I7PqpckWHb8JP0FF-gZGmpWRPgzzKLv--VnxF0rS_pnjGoT3Iq_IrcBZ74H3u_kPgtQwPQsZNdnYz8WvutXdRZwh9YV1oXQ8AiBTga06X2a35qTs_l4a9511-CGB7V3pWVBhAA"/>
+              <div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 hairline-border">
+                <span class="font-label-sm uppercase text-tertiary font-bold tracking-wider text-[11px]">BOTTOMS</span>
+              </div>
+              <button onclick="openProductModal('GB-SH-11')" class="absolute bottom-3 right-3 bg-surface-container-high/90 hover:bg-tertiary hover:text-black text-on-surface px-2.5 py-1 text-xs font-label-sm uppercase hairline-border flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">visibility</span> Quick View
+              </button>
+            </div>
+            <div class="p-space-md flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-sm text-on-surface-variant font-mono text-xs">SKU: GB-SH-11</span>
+                  <span class="font-label-sm text-tertiary font-semibold text-xs">180 GSM</span>
+                </div>
+                <h3 class="font-headline-sm uppercase text-on-surface mb-space-xs text-base">2-in-1 Performance Shorts</h3>
+                <p class="font-body-sm text-xs text-on-surface-variant mb-space-md">Featherlight woven stretch outer paired with antimicrobial compression liner, phone pouch, and towel loop.</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="openProductModal('GB-SH-11')" class="w-1/2 py-2 text-center bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs hairline-border">
+                  Inspect Specs
+                </button>
+                <button onclick="requestQuoteForSku('GB-SH-11', '2-in-1 Performance Training Shorts')" class="w-1/2 py-2 text-center bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs">
+                  Quote SKU
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. INTERACTIVE B2B ESTIMATOR & MOQ CALCULATOR ================= -->
+    <section id="calculator" class="w-full py-space-xl bg-background relative overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        
+        <div class="p-space-lg md:p-space-xl bg-surface-container-low hairline-border relative z-10">
+          <div class="flex flex-col lg:flex-row gap-space-xl items-start">
+            
+            <!-- Left Form & Inputs -->
+            <div class="lg:w-7/12 w-full">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 bg-tertiary telemetry-pulse"></span>
+                <span class="font-label-sm uppercase tracking-widest text-tertiary text-xs">INTERACTIVE COST ENGINE</span>
+              </div>
+              <h2 class="font-headline-xl text-2xl md:text-4xl uppercase tracking-tight text-on-surface mb-2">
+                B2B MOQ & PRODUCTION ESTIMATOR
+              </h2>
+              <p class="font-body-sm text-on-surface-variant mb-space-lg text-xs leading-relaxed">
+                Estimate initial production benchmarks for custom activewear lines based on garment silhouette, embellishment protocols, and batch volume.
+              </p>
+
+              <!-- Garment Type Selection -->
+              <div class="space-y-4">
+                <div>
+                  <label class="block font-label-sm uppercase text-xs tracking-wider text-on-surface mb-1.5" for="calcGarment">
+                    1. Select Garment Architecture
+                  </label>
+                  <select id="calcGarment" class="w-full px-3 py-2.5 bg-surface-container text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary">
+                    <option value="compression">Compression Athletic Shirt (240 GSM Poly-Spandex)</option>
+                    <option value="seamless_leggings">Seamless Squat-Proof Leggings (280 GSM Nylon 6.6)</option>
+                    <option value="sublimated_jersey">Sublimated Team Jersey (160 GSM Micro-Mesh)</option>
+                    <option value="fleece_hoodie">Heavyweight Fleece Training Hoodie (420 GSM French Terry)</option>
+                    <option value="tracksuit">Hybrid DWR Athletic Tracksuit (320 GSM Technical Woven)</option>
+                    <option value="training_shorts">2-in-1 Performance Liner Shorts (180 GSM Woven)</option>
+                  </select>
+                </div>
+
+                <!-- Quantity Slider -->
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <label class="font-label-sm uppercase text-xs tracking-wider text-on-surface" for="calcQty">
+                      2. Estimated Order Volume (MOQ)
+                    </label>
+                    <span id="calcQtyDisplay" class="font-mono text-tertiary text-sm font-bold">100 Units</span>
+                  </div>
+                  <input id="calcQty" type="range" min="50" max="3000" step="50" value="100" class="w-full accent-tertiary cursor-pointer"/>
+                  <div class="flex justify-between text-[10px] text-on-surface-variant font-mono pt-1">
+                    <span>50 pcs (Sample/Test)</span>
+                    <span>300 pcs (Standard)</span>
+                    <span>1,000 pcs (Scale)</span>
+                    <span>3,000+ pcs (Enterprise)</span>
+                  </div>
+                </div>
+
+                <!-- Customization Addons -->
+                <div>
+                  <span class="block font-label-sm uppercase text-xs tracking-wider text-on-surface mb-1.5">
+                    3. Manufacturing Embellishments
+                  </span>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <label class="flex items-center gap-2 p-2 bg-surface-container hairline-border cursor-pointer hover:border-tertiary/40">
+                      <input type="checkbox" data-price="1.80" class="calc-tech-option accent-tertiary rounded-none w-4 h-4" checked/>
+                      <span>High-Density 3D Matte Silicone Print</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2 bg-surface-container hairline-border cursor-pointer hover:border-tertiary/40">
+                      <input type="checkbox" data-price="1.20" class="calc-tech-option accent-tertiary rounded-none w-4 h-4" checked/>
+                      <span>Private Label Necktape & Woven Trims</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2 bg-surface-container hairline-border cursor-pointer hover:border-tertiary/40">
+                      <input type="checkbox" data-price="2.50" class="calc-tech-option accent-tertiary rounded-none w-4 h-4"/>
+                      <span>Full Italian All-Over Sublimation</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-2 bg-surface-container hairline-border cursor-pointer hover:border-tertiary/40">
+                      <input type="checkbox" data-price="1.50" class="calc-tech-option accent-tertiary rounded-none w-4 h-4"/>
+                      <span>Individual Biodegradable Custom Polybag</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Telemetry Output Box -->
+            <div class="lg:w-5/12 w-full bg-surface-container p-space-md md:p-space-lg hairline-border flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+                  <span class="font-label-sm uppercase text-xs tracking-widest text-on-surface-variant">TELEMETRY BENCHMARK</span>
+                  <span class="font-mono text-xs text-tertiary">EST. FOB EXPORT</span>
+                </div>
+
+                <div class="space-y-4">
+                  <div>
+                    <span class="text-xs text-on-surface-variant uppercase block">Estimated Unit Price (FOB)</span>
+                    <div id="calcEstimatedUnit" class="font-headline-lg text-2xl md:text-3xl text-tertiary font-mono font-bold">$16.20 - $18.50 USD</div>
+                    <span class="text-[11px] text-on-surface-variant">Includes fabric, pattern CAD, cut-make-trim & QC.</span>
+                  </div>
+
+                  <div>
+                    <span class="text-xs text-on-surface-variant uppercase block">Estimated Batch Production Total</span>
+                    <div id="calcEstimatedTotal" class="font-headline-md text-xl md:text-2xl text-on-surface font-mono">$1,620 - $1,850 USD</div>
+                  </div>
+
+                  <div class="pt-2 border-t border-white/10 grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                      <span class="text-on-surface-variant block">Sampling Timeline:</span>
+                      <span class="text-on-surface font-semibold">7 - 10 Days</span>
+                    </div>
+                    <div>
+                      <span class="text-on-surface-variant block">Bulk Production SLA:</span>
+                      <span id="calcTurnaround" class="text-tertiary font-semibold font-mono">18 - 24 Days</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Transfer Button -->
+              <div class="mt-6 pt-4 border-t border-white/10">
+                <button onclick="applyCalculatorToForm()" class="w-full py-3 bg-tertiary text-on-tertiary font-label-md uppercase font-bold tracking-wider hover:bg-white hover:text-black glow-tertiary transition-all flex items-center justify-center gap-2">
+                  <span>Transfer Specs to Official RFQ</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                </button>
+                <p class="text-[10px] text-on-surface-variant text-center mt-2">
+                  * Final pricing confirmed upon CAD tech pack review and Pantone lab-dip sign-off.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. GALLERY & PRODUCTION ATELIER SECTION -->
+    <section id="atelier" class="w-full py-space-xl bg-surface-container-low hairline-border border-x-0">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+          <div>
+            <span class="font-label-sm uppercase tracking-widest text-tertiary block mb-space-xs">FACTORY FLOOR & PERFORMANCE ATELIER</span>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface">MANUFACTURING ATELIER</h2>
+          </div>
+          <p class="font-body-md text-on-surface-variant max-w-md">
+            Inside our precision garment facilities: Japanese computerized cutting beds, specialized 4-needle stitching rows, and certified inline inspection.
+          </p>
+        </div>
+
+        <!-- Atelier Multi-Tile Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-space-md auto-rows-[240px]">
+          <!-- Gallery Tile 1 (Large 2-col) -->
+          <div class="md:col-span-2 md:row-span-2 relative overflow-hidden bg-surface-container group hairline-border">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90" alt="High tech apparel factory interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC37EVbOzJgol_cXcE_MbyC-lG1lRZTNTp8jZpRKTiZdplLAek4Gtp3KdtJcASGFwUyA8k3Mf4C129vSpZk-ZmZCf_-P0M3FSj3Lo8s8p55b-P4enS9sYOyURyltqjAnaslfYTWt9kZgO7ILWbt2PlCXSlezB_enIiNu0okr1nOXzewqZjb7T34BF_kEh8TYM_ztA1m1tkR8tC-V13KiKjlnkeRYvGu1FZ3GTV9Ig"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-85"></div>
+            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+              <div>
+                <span class="font-label-sm text-tertiary uppercase tracking-wider text-xs">PRODUCTION LINE A</span>
+                <h4 class="font-headline-sm uppercase text-on-surface text-base">High-Precision Assembly Floor</h4>
+              </div>
+              <span class="material-symbols-outlined text-tertiary">factory</span>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 2 -->
+          <div class="relative overflow-hidden bg-surface-container group hairline-border">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90" alt="Digital sublimation printer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeaWBfT1rd82eoZO9ZKwnAoJDRILXznxp4i1zdHlrZOtZhYfTIiPxhDoI-N93cbJM3YIcLHKM8L4IsKjbylvRrgCEKDG-L__t_F8lBpxlneFzQ4je8ELBkDpS3L27mlPFFw3ACDwJ3hp_NZCVOTmdhxG7o2_Nq8znC3nYlJo8aor0qpc8yO6qw5C5K6xaTRa3r42lm1MdbYBDJVcERcWjI270md95f-33mZcB_nQ"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-75"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="font-label-sm text-tertiary uppercase text-[10px]">SUBLIMATION LAB</span>
+              <p class="font-body-sm text-on-surface font-semibold text-xs">Italian Inks Transfer</p>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 3 -->
+          <div class="relative overflow-hidden bg-surface-container group hairline-border">
+            <img alt="Precision industrial sewing needle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyzkiy2_GoS5MthcoimZWZd-RPqrFr9vljFQfaT1SvzqauIvjsTX1Ip55BB4948bmsqsRG_Z_paiZpP1eyZQiKVIRyo3eZ5F_5MUvB1QGM86qjeH-Ky9fWJBnN0TRzuV0md_U05N8r1zXvGwKf5hkpb9d251vAg1ZoYpbMbDmoq5HkHTxHeRmxmgJkPoQI6gxgVhQtvEo_Isg7LC0ThqAJTIayq5je6NzVMq9oMA"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-75"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="font-label-sm text-tertiary uppercase text-[10px]">SEWING BENCHMARK</span>
+              <p class="font-body-sm text-on-surface font-semibold text-xs">Zero-Chafe Flatlock Seams</p>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 4 -->
+          <div class="relative overflow-hidden bg-surface-container group hairline-border">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90" alt="Laser cutting machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQIf86aGBNJi_Epv0jFaYsOEvRl6SS2RcED2SFGe2kpBA6JmXTm71dPTXQ5nMQyrhyRzzVQmyU91SD5FXKfFk0k79NN2lp1BN9EcdLhU9Ar07qksMxsBThJIIjKdBwaIyC69r-WFwJuT07uI9VLglaZKjKSHFeP85-FRj0f5CDo4s0U9sbUOwyThklEbIlyHvwHAQ7zKljUXwyaVMH7WnpmnEb1pNlDfYpO3EzTA"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-75"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="font-label-sm text-tertiary uppercase text-[10px]">AUTOMATED CAD</span>
+              <p class="font-body-sm text-on-surface font-semibold text-xs">Laser Pattern Cutting</p>
+            </div>
+          </div>
+
+          <!-- Gallery Tile 5 -->
+          <div class="relative overflow-hidden bg-surface-container group hairline-border">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90" alt="Garment technician inspecting activewear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaq0LPliiL1VNZVpFEvMevd_JjiXIwFewSaAbZ4IQJS5wlpsjEWxb9QVEweAdTL9KzZIfenFpAg6Jz3nAVKvr8wAwjx2W6ut9tnqufq4BJS8hwC5gtevx_gWh7OvKdC6nDdnrSWxt56l-Kg8gOd9k4ovCM-FoloBD6bS2GnXeCbl1Qk6HD2OIgSRxg2VrIdP4ddM_RPbWlhMWWaJz3XFclXMzqQthOTcqk2GN0jg"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-75"></div>
+            <div class="absolute bottom-3 left-3">
+              <span class="font-label-sm text-tertiary uppercase text-[10px]">QA DISCIPLINE</span>
+              <p class="font-body-sm text-on-surface font-semibold text-xs">100% Inline Metal Scan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. CALL-TO-ACTION (CTA) SECTION -->
+    <section class="w-full py-space-xl bg-primary-container relative overflow-hidden">
+      <div class="absolute -top-32 -right-32 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop relative z-10">
+        <div class="p-space-xl bg-surface-container-low hairline-border shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+          <div class="max-w-2xl">
+            <div class="flex items-center gap-space-xs mb-space-xs">
+              <span class="w-2 h-2 bg-tertiary telemetry-pulse"></span>
+              <span class="font-label-sm uppercase tracking-widest text-tertiary text-xs">EXPEDITE YOUR SUPPLY CHAIN</span>
+            </div>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface mb-space-sm">
+              READY TO BUILD YOUR NEXT COLLECTION?
+            </h2>
+            <p class="font-body-lg text-on-surface-variant">
+              Let's create high-performance activewear that elevates your brand beyond the competition. Talk with our textile engineering team today.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-space-md shrink-0 w-full sm:w-auto">
+            <button onclick="scrollToQuote()" class="px-space-lg py-space-sm bg-tertiary text-on-tertiary font-label-lg uppercase tracking-wider font-bold text-center transition-all hover:bg-white hover:text-black glow-tertiary">
+              Get A Custom Quote
+            </button>
+            <button onclick="openWhatsAppChat()" class="px-space-lg py-space-sm bg-transparent text-on-surface font-label-lg uppercase tracking-wider font-bold text-center hairline-border-high hover:bg-white hover:text-black transition-all">
+              Direct WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 12. PROFESSIONAL B2B INQUIRY FORM SECTION ================= -->
+    <section id="contact" class="w-full py-space-xl bg-background">
+      <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+          
+          <!-- Inquiry Intro & Assurances (Left) -->
+          <div class="lg:col-span-5">
+            <span class="font-label-sm uppercase tracking-widest text-tertiary block mb-space-xs">DIRECT B2B SALES & CONTRACTS</span>
+            <h2 class="font-headline-xl text-3xl md:text-5xl uppercase tracking-tight text-on-surface mb-space-md">
+              START YOUR CUSTOM MANUFACTURING ORDER
+            </h2>
+            <p class="font-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Complete the production inquiry matrix. Our engineering and merchandising directors review all submissions and respond with an itemized quote within 24 business hours.
+            </p>
+
+            <!-- Assurance Cards -->
+            <div class="space-y-space-md mb-space-lg">
+              <div class="p-space-md bg-surface-container hairline-border flex items-start gap-space-sm cursor-pointer hover:border-tertiary/60 transition-colors" onclick="openComplianceModal('privacy')">
+                <span class="material-symbols-outlined text-tertiary text-[24px]">gavel</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm flex items-center gap-1">Strict NDA Protection <span class="material-symbols-outlined text-[14px] text-tertiary">launch</span></h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">Your CAD designs, brand assets, and proprietary tech packs remain 100% confidential under contract.</p>
+                </div>
+              </div>
+              <div class="p-space-md bg-surface-container hairline-border flex items-start gap-space-sm cursor-pointer hover:border-tertiary/60 transition-colors" onclick="openComplianceModal('terms')">
+                <span class="material-symbols-outlined text-tertiary text-[24px]">speed</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm flex items-center gap-1">Rapid Prototyping Turnaround <span class="material-symbols-outlined text-[14px] text-tertiary">launch</span></h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">Samples produced in 7-10 business days upon spec approval, with global DHL/FedEx priority dispatch.</p>
+                </div>
+              </div>
+              <div class="p-space-md bg-surface-container hairline-border flex items-start gap-space-sm cursor-pointer hover:border-tertiary/60 transition-colors" onclick="openQuickContactModal()">
+                <span class="material-symbols-outlined text-tertiary text-[24px]">support_agent</span>
+                <div>
+                  <h4 class="font-headline-sm uppercase text-on-surface text-sm flex items-center gap-1">Dedicated Account Director <span class="material-symbols-outlined text-[14px] text-tertiary">launch</span></h4>
+                  <p class="font-body-sm text-xs text-on-surface-variant">One single point of contact overseeing fabric sourcing, pattern grading, and logistics clearance.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Badges -->
+            <div class="p-space-md bg-surface-container-high hairline-border text-xs space-y-2">
+              <div class="flex items-center gap-2 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[18px]">email</span>
+                <span class="font-mono">b2b@gabacorporation.com</span>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface">
+                <span class="material-symbols-outlined text-tertiary text-[18px]">phone</span>
+                <span class="font-mono">+1 (800) 422-2677 / +92 300 0000000</span>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined text-tertiary text-[18px]">location_on</span>
+                <span>Industrial Textiles Zone, Sialkot Export Hub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Matrix Container (Right) -->
+          <div class="lg:col-span-7 bg-surface-container p-space-lg md:p-space-xl hairline-border shadow-2xl">
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-space-md" id="inquiryForm">
+              <!-- Web3Forms Access Key & Config -->
+              <input type="hidden" name="access_key" value="ebf1fa59-544f-423b-ac3c-97ed0f85019e"/>
+              <input type="hidden" name="subject" id="web3Subject" value="New B2B Sportswear Manufacturing RFQ - GABA CORP"/>
+              <input type="hidden" name="from_name" value="GABA Corporation B2B Portal"/>
+              <input type="hidden" name="reference_id" id="web3ReferenceId" value="GB-2026-PENDING"/>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                <!-- Full Name -->
+                <div>
+                  <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="fullName">
+                    Full Name *
+                  </label>
+                  <input class="w-full px-space-sm py-2.5 bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="fullName" name="name" placeholder="e.g. Alexander Vance" required="" type="text"/>
+                </div>
+                <!-- Company Name -->
+                <div>
+                  <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="companyName">
+                    Company / Brand Name *
+                  </label>
+                  <input class="w-full px-space-sm py-2.5 bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="companyName" name="company" placeholder="e.g. Apex Performance Athletics" required="" type="text"/>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                <!-- Business Email -->
+                <div>
+                  <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="email">
+                    Business Email *
+                  </label>
+                  <input class="w-full px-space-sm py-2.5 bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="email" name="email" placeholder="director@yourbrand.com" required="" type="email"/>
+                </div>
+                <!-- Country -->
+                <div>
+                  <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="country">
+                    Destination Country *
+                  </label>
+                  <input class="w-full px-space-sm py-2.5 bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="country" name="country" placeholder="e.g. United States / United Kingdom" required="" type="text"/>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                <!-- Product Category Selection -->
+                <div>
+                  <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="categorySelect">
+                    Product Category *
+                  </label>
+                  <select class="w-full px-space-sm py-2.5 bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="categorySelect" name="category" required="">
+                    <option disabled="" selected="" value="">Select category...</option>
+                    <option value="Sportswear">Sportswear & Running</option>
+                    <option value="GymWear">Gym & Fitness Apparel</option>
+                    <option value="Uniforms">Sports Jerseys & Team Uniforms</option>
+                    <option value="Compression">Compression & Base Layers</option>
+                    <option value="Tracksuits">Tracksuits & Heavyweight Hoodies</option>
+                    <option value="CustomBespoke">Other Bespoke Performance Line</option>
+                  </select>
+                </div>
+                <!-- Estimated Order Quantity -->
+                <div>
+                  <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="moqSelect">
+                    Estimated Initial Order Volume *
+                  </label>
+                  <select class="w-full px-space-sm py-2.5 bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="moqSelect" name="order_volume" required="">
+                    <option disabled="" selected="" value="">Select production quantity...</option>
+                    <option value="SampleBatch">Sample Batch Only (1 - 5 pieces)</option>
+                    <option value="50-100">50 - 100 units (Low MOQ Launch)</option>
+                    <option value="100-500">100 - 500 units</option>
+                    <option value="500-2000">500 - 2,000 units</option>
+                    <option value="2000+">2,000+ units (Enterprise Commercial Run)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Customization Requirements Checkboxes -->
+              <div>
+                <span class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs">
+                  Manufacturing Requirements (Select all that apply)
+                </span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <label class="flex items-center gap-2 p-2 bg-surface-container-high hairline-border cursor-pointer hover:border-tertiary/40">
+                    <input class="w-4 h-4 accent-tertiary rounded-none custom-req-checkbox" type="checkbox" name="requirements" value="Custom Fabric Dye & Milling"/>
+                    <span>Custom Fabric Dye & Milling</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 bg-surface-container-high hairline-border cursor-pointer hover:border-tertiary/40">
+                    <input class="w-4 h-4 accent-tertiary rounded-none custom-req-checkbox" type="checkbox" name="requirements" value="Silicone / DTF / Sublimation Print"/>
+                    <span>Silicone / DTF / Sublimation Print</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 bg-surface-container-high hairline-border cursor-pointer hover:border-tertiary/40">
+                    <input class="w-4 h-4 accent-tertiary rounded-none custom-req-checkbox" type="checkbox" name="requirements" value="Private Label Necktags & Packaging"/>
+                    <span>Private Label Necktags & Packaging</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2 bg-surface-container-high hairline-border cursor-pointer hover:border-tertiary/40">
+                    <input class="w-4 h-4 accent-tertiary rounded-none custom-req-checkbox" type="checkbox" name="requirements" value="Bespoke Anatomical Grading"/>
+                    <span>Bespoke Anatomical Grading</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Tech Pack Drag and Drop Area -->
+              <div>
+                <span class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs">
+                  Upload Tech Pack / Design Sketches (Optional)
+                </span>
+                <div id="techPackDropZone" class="p-4 bg-surface-container-high hairline-border border-dashed border-white/20 hover:border-tertiary transition-colors text-center cursor-pointer">
+                  <input type="file" id="techPackFileInput" multiple class="hidden" accept=".pdf,.png,.jpg,.jpeg,.ai,.psd,.zip"/>
+                  <span class="material-symbols-outlined text-tertiary text-3xl mb-1 block">cloud_upload</span>
+                  <p class="text-xs text-on-surface font-semibold">Drop tech pack files here, or <span class="text-tertiary underline">browse</span></p>
+                  <span class="text-[10px] text-on-surface-variant block mt-0.5">Supports PDF, AI, PSD, PNG, JPG or ZIP up to 50MB</span>
+                </div>
+                <div id="techPackFileList" class="mt-2 space-y-1 hidden"></div>
+              </div>
+
+              <!-- Project Details Textarea -->
+              <div>
+                <label class="block font-label-sm uppercase tracking-wider text-on-surface mb-1 text-xs" for="projectDetails">
+                  Project Scope & Tech Pack Details *
+                </label>
+                <textarea class="w-full px-space-sm py-space-sm bg-surface-container-high text-on-surface text-sm hairline-border focus:outline-none focus:border-tertiary" id="projectDetails" name="message" placeholder="Describe your target fabric blend (e.g. 80/20 poly-spandex), garment cuts, target launch date, and any special tech pack requirements..." required="" rows="4"></textarea>
+              </div>
+
+              <!-- Submit CTA Button -->
+              <button class="w-full py-3.5 bg-tertiary text-on-tertiary font-label-lg uppercase tracking-widest font-bold flex items-center justify-center gap-space-sm transition-all hover:bg-white hover:text-black glow-tertiary active:scale-[0.99]" type="submit">
+                <span>Send Production Inquiry</span>
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </button>
+
+              <!-- Assurance Note Below Form -->
+              <div class="flex items-center justify-between text-on-surface-variant pt-space-xs text-xs">
+                <button type="button" onclick="openComplianceModal('privacy')" class="font-label-sm text-tertiary flex items-center gap-1 hover:underline">
+                  <span class="material-symbols-outlined text-[14px]">lock</span>
+                  Confidential B2B Transmission (View NDA)
+                </button>
+                <span class="font-label-sm">
+                  Rapid response within 24 business hours
+                </span>
+              </div>
+            </form>
+            </form>
+
+            <!-- Success State Overlay -->
+            <div class="hidden p-space-xl bg-surface-container-lowest text-center space-y-space-md hairline-border" id="formSuccessState">
+              <span class="material-symbols-outlined text-[54px] text-tertiary">verified</span>
+              <h3 class="font-headline-md uppercase text-on-surface text-xl">Inquiry Dispatched Successfully</h3>
+              
+              <div class="p-3 bg-surface-container max-w-sm mx-auto hairline-border text-xs">
+                <span class="text-on-surface-variant uppercase block">B2B Transmission Tracking ID:</span>
+                <div class="flex items-center justify-center gap-2 mt-1">
+                  <span id="inquiryRefDisplay" class="font-mono text-tertiary text-lg font-bold">GB-2026-9842</span>
+                  <button onclick="copyReferenceId()" class="p-1 text-on-surface-variant hover:text-tertiary" title="Copy Reference ID">
+                    <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="font-body-md text-on-surface-variant max-w-md mx-auto text-xs leading-relaxed">
+                Thank you for choosing GABA CORPORATION. Your manufacturing requirements have been assigned to our senior technical merchandiser. A detailed proposal and NDA document will be sent to your email within 24 hours.
+              </p>
+              
+              <!-- Success State Action Buttons -->
+              <div class="flex flex-wrap justify-center gap-2 pt-2">
+                <button class="px-space-md py-2 bg-surface-container-high text-on-surface font-label-sm uppercase tracking-wider hover:bg-tertiary hover:text-black transition-colors text-xs hairline-border flex items-center gap-1" onclick="downloadInquiryReceipt()" type="button">
+                  <span class="material-symbols-outlined text-[15px]">receipt_long</span> Download RFQ Receipt (.txt)
+                </button>
+                <button onclick="openWhatsAppChat()" class="px-space-md py-2 bg-tertiary text-on-tertiary font-label-sm uppercase tracking-wider font-bold hover:bg-white hover:text-black transition-colors text-xs flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp Follow-up
+                </button>
+                <button class="px-space-md py-2 bg-surface-container text-on-surface font-label-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors text-xs hairline-border" onclick="resetFormState()" type="button">
+                  Submit Another Inquiry
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-surface-container-lowest text-on-surface pt-space-xl pb-space-lg hairline-border border-x-0 border-b-0">
+    <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin lg:px-margin-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-4 space-y-space-md">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-8 h-8 bg-tertiary text-on-tertiary font-display font-bold flex items-center justify-center">G</div>
+            <span class="font-headline-sm uppercase text-on-surface font-bold">GABA CORP</span>
+          </div>
+          <p class="font-body-md text-on-surface-variant leading-relaxed max-w-sm text-xs">
+            Pioneering precision sportswear and activewear manufacturing for global athletic brands, gym chains, and private labels. Exporting worldwide with zero defects.
+          </p>
+          <div class="pt-space-xs flex flex-wrap items-center gap-2">
+            <button onclick="openComplianceModal('compliance')" class="px-2 py-1 bg-surface-container-high text-tertiary font-label-sm uppercase tracking-widest text-[10px] hairline-border hover:bg-tertiary hover:text-black transition-colors">ISO 9001:2015</button>
+            <button onclick="openComplianceModal('compliance')" class="px-2 py-1 bg-surface-container-high text-tertiary font-label-sm uppercase tracking-widest text-[10px] hairline-border hover:bg-tertiary hover:text-black transition-colors">OEKO-TEX 100</button>
+            <button onclick="openComplianceModal('compliance')" class="px-2 py-1 bg-surface-container-high text-tertiary font-label-sm uppercase tracking-widest text-[10px] hairline-border hover:bg-tertiary hover:text-black transition-colors">WRAP CERTIFIED</button>
+          </div>
+        </div>
+
+        <!-- Links Col 1 -->
+        <div class="lg:col-span-2 space-y-space-sm">
+          <div class="font-label-lg uppercase tracking-wider text-on-surface pb-space-xs text-xs font-bold">Product Lines</div>
+          <nav class="flex flex-col space-y-2 text-xs">
+            <button onclick="openProductModal('GB-CMP-09')" class="text-left text-on-surface-variant hover:text-tertiary transition-colors">Compression Gear</button>
+            <button onclick="openProductModal('GB-LG-08')" class="text-left text-on-surface-variant hover:text-tertiary transition-colors">Seamless Activewear</button>
+            <button onclick="openProductModal('GB-TRK-03')" class="text-left text-on-surface-variant hover:text-tertiary transition-colors">Performance Outerwear</button>
+            <button onclick="openProductModal('GB-HD-12')" class="text-left text-on-surface-variant hover:text-tertiary transition-colors">Athletic Hoodies & Tees</button>
+            <button onclick="openProductModal('GB-TM-04')" class="text-left text-on-surface-variant hover:text-tertiary transition-colors">Sublimated Teamwear</button>
+          </nav>
+        </div>
+
+        <!-- Links Col 2 -->
+        <div class="lg:col-span-3 space-y-space-sm">
+          <div class="font-label-lg uppercase tracking-wider text-on-surface pb-space-xs text-xs font-bold">Manufacturing & Specs</div>
+          <nav class="flex flex-col space-y-2 text-xs">
+            <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#custom-manufacturing">OEM / ODM Production</a>
+            <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#custom-manufacturing">R&D & Material Tech</a>
+            <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#custom-manufacturing">Bonded Seams & Laser Cut</a>
+            <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#calculator">B2B Cost Estimator</a>
+            <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#our-process">Production Protocols</a>
+          </nav>
+        </div>
+
+        <!-- Contact Col -->
+        <div class="lg:col-span-3 space-y-space-sm">
+          <div class="font-label-lg uppercase tracking-wider text-on-surface pb-space-xs text-xs font-bold">Global B2B Sales</div>
+          <div class="space-y-2 text-on-surface-variant font-body-sm text-xs">
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">mail</span>
+              <a href="mailto:b2b@gabacorporation.com" class="hover:text-tertiary">b2b@gabacorporation.com</a>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">call</span>
+              <a href="tel:+18004222677" class="hover:text-tertiary">+1 (800) 422-2677 / +92 300 0000000</a>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">factory</span>
+              <span>Precision Complex 4, Industrial Textiles Zone, Sialkot / Export Hub</span>
+            </div>
+          </div>
+          
+          <div class="pt-2 flex flex-wrap gap-2">
+            <button onclick="openWhatsAppChat()" class="px-3 py-1.5 bg-surface-container text-tertiary hover:bg-tertiary hover:text-black transition-colors text-xs font-label-sm uppercase flex items-center gap-1 hairline-border">
+              <span class="material-symbols-outlined text-[14px]">chat</span> Chat on WhatsApp
+            </button>
+            <button onclick="openQuickContactModal()" class="px-3 py-1.5 bg-surface-container text-on-surface hover:text-white transition-colors text-xs font-label-sm uppercase flex items-center gap-1 hairline-border">
+              <span class="material-symbols-outlined text-[14px]">contact_phone</span> Contact Options
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-space-md border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-on-surface-variant uppercase text-[11px]">
+        <p>© 2026 GABA CORPORATION. Engineered Performance Apparel. All rights reserved.</p>
+        <div class="flex items-center gap-space-md">
+          <button onclick="openComplianceModal('privacy')" class="hover:text-tertiary transition-colors">Privacy Policy</button>
+          <button onclick="openComplianceModal('terms')" class="hover:text-tertiary transition-colors">Terms of Supply</button>
+          <button onclick="openComplianceModal('compliance')" class="hover:text-tertiary transition-colors">Factory Compliance</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= PRODUCT QUICK VIEW MODAL ================= -->
+  <div id="productDetailModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="relative w-full max-w-4xl bg-surface-container-low hairline-border-tertiary p-space-md md:p-space-lg shadow-2xl max-h-[92vh] overflow-y-auto">
+      <button onclick="closeProductModal()" aria-label="Close Modal" class="absolute top-4 right-4 text-on-surface hover:text-tertiary transition-colors bg-surface-container p-1 hairline-border z-20">
+        <span class="material-symbols-outlined text-[24px]">close</span>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ================= COMPLIANCE & LEGAL MODAL ================= -->
+  <div id="complianceModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="relative w-full max-w-2xl bg-surface-container-low hairline-border-tertiary p-space-lg shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-2xl">verified</span>
+          <h3 id="complianceModalTitle" class="font-headline-sm uppercase text-on-surface text-base font-bold">LEGAL & FACTORY COMPLIANCE</h3>
+        </div>
+        <button onclick="closeComplianceModal()" aria-label="Close Modal" class="p-1 bg-surface-container text-on-surface hover:text-tertiary hairline-border">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div id="complianceModalBody" class="font-body-sm text-on-surface-variant text-xs leading-relaxed space-y-3"></div>
+      <div class="mt-6 pt-3 border-t border-white/10 flex justify-end">
+        <button onclick="closeComplianceModal()" class="px-5 py-2 bg-tertiary text-on-tertiary font-label-sm uppercase font-bold text-xs hover:bg-white hover:text-black">
+          Understood & Acknowledged
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= QUICK CONTACT OPTIONS DIALOG MODAL ================= -->
+  <div id="contactOptionsModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="relative w-full max-w-md bg-surface-container-low hairline-border p-space-lg shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+        <h3 class="font-headline-sm uppercase text-on-surface text-base font-bold flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary">headset_mic</span>
+          Direct B2B Channels
+        </h3>
+        <button onclick="closeQuickContactModal()" aria-label="Close Modal" class="p-1 bg-surface-container text-on-surface hover:text-tertiary hairline-border">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <!-- Option 1: WhatsApp -->
+        <button onclick="closeQuickContactModal(); openWhatsAppChat();" class="w-full p-3 bg-surface-container hairline-border hover:border-tertiary transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-tertiary text-2xl">chat</span>
+            <div class="text-left">
+              <span class="font-bold text-on-surface uppercase block text-xs group-hover:text-tertiary">Official WhatsApp Chat</span>
+              <span class="text-on-surface-variant text-[11px]">Instant response from Senior Merchandiser</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_forward</span>
+        </button>
+
+        <!-- Option 2: Email -->
+        <a href="mailto:b2b@gabacorporation.com?subject=Sportswear%20Manufacturing%20Inquiry" onclick="closeQuickContactModal();" class="w-full p-3 bg-surface-container hairline-border hover:border-tertiary transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-tertiary text-2xl">mail</span>
+            <div class="text-left">
+              <span class="font-bold text-on-surface uppercase block text-xs group-hover:text-tertiary">Official Inquiry Email</span>
+              <span class="text-on-surface-variant text-[11px]">b2b@gabacorporation.com</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_forward</span>
+        </a>
+
+        <!-- Option 3: Phone Direct -->
+        <a href="tel:+18004222677" onclick="closeQuickContactModal();" class="w-full p-3 bg-surface-container hairline-border hover:border-tertiary transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-tertiary text-2xl">call</span>
+            <div class="text-left">
+              <span class="font-bold text-on-surface uppercase block text-xs group-hover:text-tertiary">Call Direct Line</span>
+              <span class="text-on-surface-variant text-[11px]">+1 (800) 422-2677 / +92 300 0000000</span>
+            </div>
+          </div>
+          <span class="material-symbols-outlined text-[16px] text-tertiary">arrow_forward</span>
+        </a>
+
+        <!-- Option 4: On-page Quote -->
+        <button onclick="closeQuickContactModal(); scrollToQuote();" class="w-full p-3 bg-tertiary text-on-tertiary font-bold font-label-sm uppercase tracking-wider text-xs hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2">
+          <span>Fill On-Page RFQ Form</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING QUICK ACTION BAR ================= -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-2">
+    <button onclick="openQuickContactModal()" aria-label="Open Communication Channels" class="w-12 h-12 bg-tertiary text-on-tertiary flex items-center justify-center glow-tertiary hover:scale-105 transition-transform hairline-border" title="Quick Contact Options">
+      <span class="material-symbols-outlined text-[24px]">chat</span>
+    </button>
+    <a href="#home" aria-label="Back to Top" class="w-12 h-12 bg-surface-container text-on-surface hover:text-tertiary flex items-center justify-center hairline-border hover:bg-surface-container-high transition-colors" title="Back to Top">
+      <span class="material-symbols-outlined text-[22px]">arrow_upward</span>
+    </a>
+  </div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
